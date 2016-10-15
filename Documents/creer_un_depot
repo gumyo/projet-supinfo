@@ -1,0 +1,47 @@
+
+----------------------creer un repo si aucun n'es a disposition-----------------------
+
+
+pour creer un depot faire les ligne de commandes suivante
+
+creer une cle :
+      ssh-keygen -t rsa -b 4096 -C "ton_adresse_email"
+entrer un mot de passe et laisser dans le fichier d'orin (appuyer sur entrée lors de la demande).
+
+puis aller chercher la cle
+     ssh-agent bash
+     ssh-add
+
+afficher sa cle puis la copier
+	 cat ~/.ssh/id_rsa.pub
+copier l'ensemble des ligne ( de "ssh....." a "adresse mail".
+
+Et sur le site de Github en haut à droite faire Paramètres puis clés SSH et GPG faire "ajouter une clé SSH" rentrer  un titre coller la clé et faire  ajouter.
+
+Enfin, sur ton pc, faire ssh-add ~/.ssh/id_rsa.
+
+une fois creer faire "git init" puis
+
+----------une fois le repo creer voici ls commande pour interagir avec (votre repo ou celu d'un autre)----------
+
+_pour envoyer un fichier dans le repository:
+git add nomdufichier (ajoute le fichier a envyer)
+git commit -m "message pour expliquer la raison de l'envoi" (prepare l'envoie avec un message)
+git remote add origin <server> (le serveur est l'url donne sur git hub + cette ligne n'est a effectue que si l'on dsire changer d 'endroit d'envoie de fichier) 
+git push origin master (envoie)
+
+_pour recupere un depot:
+git clone <server>
+
+une fois un clone sur le pc pour le mettre a jour des differents envoie faire un "git pull" dans le dossier.
+
+pour servir d'exemple voici mon serveur publique :"git@github.com:gumyo/projet-supinfo.git" avec comme mot de passe "supinfo35".
+
+
+
+-------------------conseil--------------------------------------
+un repo peut vit devenir tres gros il est donc preferable d'en creer un a chaque new projet ou d'effacer tout du repo (le mettre sur le pc ou DD externe) afin d'avoir un repo vide pour le projet suivant.
+
+lors d'un projet pusher SOUVENT car en cas d'erreur tout sera recuperable car en ligne.
+
+pour avoir une image plus clair git est l'equivalent d'un cloud.

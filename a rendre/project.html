@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body onload="comprobarnavegador();">
+	<header>
+		<h1> jeux de puzzle </h1>
+		<link rel="stylesheet" type="text/css" href="test.css" media="all">
+		<script type="text/javascript" src="test.js"></script>
+	</header>
+	<p>
+		<img src="image.jpg">
+	</p>
+	<section id="piece_puzzle">
+		<h2> 
+		<p1>piece du puzzle</p1>
+		<p2>puzzle</p2> 
+		</h2>
+		<div id="piece" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+			<img id="piece8" src="piece_8.jpg" alt="piece8" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece3" src="piece_3.jpg" alt="piece3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece9" src="piece_9.jpg" alt="piece9" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece5" src="piece_5.jpg" alt="piece5" draggable="true"
+			ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece7" src="piece_7.jpg" alt="piece7" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece1" src="piece_1.jpg" alt="piece1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece2" src="piece_2.jpg" alt="piece2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece4" src="piece_4.jpg" alt="piece4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+			<img id="piece6" src="piece_6.jpg" alt="piece6" draggable="true" ondragstart="start(event)" ondragend="end(event)">	
+		</div>
+		<div id="puzzle">
+			<div class="pieces" id="un" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="deux" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="trois" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="quatre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="cinq" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="six" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="sept" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="huit" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+			<div class="pieces" id="neuf" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+		</div>
+		<div id="time" <h2>timer:</h2>
+		</div>
+		<p3>Time: <span>0</span> seconds
+			<script>
+			var span = document.querySelector("span");
+			var button = document.querySelector("button");
+			var intervalID = setInterval(function() {
+				var seconds = parseInt(span.textContent);
+				span.textContent = ++seconds;
+			}, 1000);
+			 button.addEventListener("click", function() {
+				clearInterval(intervalID);
+			});
+			</script>
+		</p3>
+		<br>
+		<br>
+		<h3>
+			<fieldset>
+				<legend>records</legend>
+				<li>top record: </li>
+				<li>2eme: </li>
+				<li>3eme:</li>
+			</fieldset>
+		</h3>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+org 100h
+
+MOV AX, 10F0h
+MOV BX, 0C0BBh
+MOV CX, 0A10h
+MOV DX, 0DDFFh
+
+
+CMC 
+ADC AX, CX
+CMC
+ADC BX, DX
+
+
+ret

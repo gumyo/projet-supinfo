@@ -1,0 +1,33 @@
+org 100h
+
+MOV AL, 15
+MOV AH, -20
+IMUL AH
+
+
+MOV AL, 115
+MOV AH, -10
+IMUL AH
+
+MOV AX, 115
+MOV BX, -10
+IMUL BX
+
+MOV AH, 0
+MOV AL, 93
+MOV BL, 3
+DIV BL
+
+;MOV AL, 520
+;MOV BL, -10
+;IDIV BL
+
+MOV AX, 520
+MOV BX, -10
+IDIV BX
+
+ret
+
+
+
+
